@@ -31,7 +31,7 @@ void Game::generatePlayers(int n) {
 
         string name = "NPC " + to_string(startIndex + i);
         int hits = 0;
-        float luck = frand(0.10f, 0.50f);
+        float luck = 0.10f;
         float exp = 50.0f;
         int level = 1;
 

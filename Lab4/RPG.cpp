@@ -1,6 +1,7 @@
 #include "RPG.h"
 #include <iostream>
 #include <cstdlib>
+#include <iomanip> 
 using namespace std;
 
 // Default player (NPC) per spec
@@ -50,6 +51,7 @@ void RPG::attack (RPG* opponent) {
 }
 
 void RPG::printStats() {
+     cout << fixed << setprecision(6);
     cout<<name
         <<" | Hits Taken: " << hits_taken 
         <<" | Luck: " << luck
