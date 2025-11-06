@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     Game g;
 
-    int num_players = 10;   // fixed value to match professor’s output
+    int num_players = 10;  
     g.generatePlayers(num_players);
 
     g.gameLoop();
