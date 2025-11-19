@@ -1,16 +1,14 @@
 #include "RPG.h"
 #include <iostream>
 #include <random>
+#include <iomanip>
 using namespace std;
 
 RPG::RPG() {
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_real_distribution<float> dis(0.0f, 1.0f);
 
     name = "NPC";
     hits_taken = 0;
-    luck = dis(gen);
+    luck = 0.1f;
     exp = 0.0f;
     level = 1;
 }
@@ -82,9 +80,11 @@ void RPG::attack(RPG* opponent) {
 }
 
 void RPG::printStats() {
+cout << fixed << setprecision(6);
+
     cout << "Name: " << name
          << "\tHits Taken: " << hits_taken
-         << "tLuck: " <<luck
+         << "\tLuck: " <<luck
          << "\tExp: " << exp
          << "\tLevel: " << level
          << "\tStatus: " << (isAlive() ? "Alive" : "Dead")
